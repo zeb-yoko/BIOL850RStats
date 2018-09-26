@@ -1,0 +1,7 @@
+site.dat <- read.csv("sitedata.csv")
+summary(site.dat)
+cor(site.dat$Temp,site.dat$pH, use="complete.obs") 
+library(tidyr)
+library(dplyr)
+site.d<-select(site.dat, -Site)
+cor(site.d, use="complete.obs") 
